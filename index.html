@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Marketing Digital | Estrategia & Resultados</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Aplicamos la fuente Inter como fuente principal */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Transición suave para el menú móvil */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Estilo para elementos con animación antes de que se activen */
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+    </style>
+
+    <script>
+        // Configuración personalizada de Tailwind (opcional, pero bueno para la fuente)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#4f46e5', // Indigo 600
+                            hover: '#4338ca' // Indigo 700
+                        },
+                        secondary: '#10b981' // Emerald 500
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ===== Header / Navegación ===== -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#inicio" class="text-2xl font-bold text-primary">
+                Agencia[Logo]
+            </a>
+
+            <!-- Navegación Desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-gray-600 hover:text-primary transition-colors">Inicio</a>
+                <a href="#servicios" class="text-gray-600 hover:text-primary transition-colors">Servicios</a>
+                <a href="#nosotros" class="text-gray-600 hover:text-primary transition-colors">Nosotros</a>
+                <a href="#casos-exito" class="text-gray-600 hover:text-primary transition-colors">Casos de Éxito</a>
+                <a href="#blog" class="text-gray-600 hover:text-primary transition-colors">Blog</a>
+                <a href="#contacto" class="bg-primary text-white font-medium py-2 px-5 rounded-lg hover:bg-primary-hover transition-colors">
+                    Contacto
+                </a>
+            </div>
+
+            <!-- Botón Menú Móvil -->
+            <div class="md:hidden">
+                <button id="menu-btn" aria-label="Abrir menú">
+                    <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menú Móvil (Oculto por defecto) -->
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-72 bg-white shadow-xl transform translate-x-full md:hidden z-50">
+            <div class="flex justify-end p-6">
+                <button id="close-btn" aria-label="Cerrar menú">
+                    <i data-lucide="x" class="w-6 h-6 text-gray-700"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-6 p-6">
+                <a href="#inicio" class="text-lg text-gray-700 hover:text-primary">Inicio</a>
+                <a href="#servicios" class="text-lg text-gray-700 hover:text-primary">Servicios</a>
+                <a href="#nosotros" class="text-lg text-gray-700 hover:text-primary">Nosotros</a>
+                <a href="#casos-exito" class="text-lg text-gray-700 hover:text-primary">Casos de Éxito</a>
+                <a href="#blog" class="text-lg text-gray-700 hover:text-primary">Blog</a>
+                <a href="#contacto" class="bg-primary text-white font-medium py-3 px-6 rounded-lg text-center hover:bg-primary-hover">
+                    Contacto
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ===== Sección Hero (Inicio) ===== -->
+        <section id="inicio" class="bg-gray-50 pt-32 pb-24 md:pt-40 md:pb-32">
+            <div class="container mx-auto px-6 md:flex md:items-center md:justify-between" data-aos="fade-in" data-aos-duration="1000">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                        Transformamos Ideas en
+                        <span class="text-primary">Resultados Digitales</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto md:mx-0" data-aos="fade-in" data-aos-delay="200">
+                        Somos la agencia de marketing digital que tu negocio necesita para crecer. 
+                        Combinamos estrategia, creatividad y tecnología para alcanzar tus objetivos.
+                    </p>
+                    <a href="#contacto" class="bg-primary text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-primary-hover transition-colors shadow-lg" data-aos="fade-in" data-aos-delay="400">
+                        Hablemos de tu Proyecto
+                    </a>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Transformamos ideas en resultados digitales" class="rounded-2xl shadow-2xl border-4 border-white bg-white w-full max-w-lg object-cover block" style="min-height:220px; min-width:220px;" data-aos="zoom-in" data-aos-delay="300">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Clientes (Prueba Social) ===== -->
+        <section id="clientes" class="py-16 bg-white">
+            <div class="container mx-auto px-6" data-aos="fade-in">
+                <h3 class="text-center text-gray-500 uppercase tracking-widest font-medium mb-10">
+                    Confían en Nosotros
+                </h3>
+                <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-70 grayscale">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Logo Google" class="h-8 md:h-10 bg-white p-2 rounded" data-aos="fade-in" data-aos-delay="100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Logo Facebook" class="h-8 md:h-10 bg-white p-2 rounded" data-aos="fade-in" data-aos-delay="200">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Logo Instagram" class="h-8 md:h-10 bg-white p-2 rounded" data-aos="fade-in" data-aos-delay="300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Logo Microsoft" class="h-8 md:h-10 bg-white p-2 rounded" data-aos="fade-in" data-aos-delay="400">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Logo IBM" class="h-8 md:h-10 bg-white p-2 rounded" data-aos="fade-in" data-aos-delay="500">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Servicios ===== -->
+        <section id="servicios" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Nuestros Servicios
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Soluciones integrales de marketing digital diseñadas para 
+                        conectar con tu audiencia y potenciar tu crecimiento.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Tarjeta Servicio 1: SEO -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-primary/10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="search" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Posicionamiento SEO</h3>
+                        <p class="text-gray-600 mb-5">
+                            Aumentamos tu visibilidad orgánica en Google para atraer tráfico 
+                            de calidad y clientes potenciales.
+                        </p>
+                        <a href="#" class="font-semibold text-primary hover:text-primary-hover">Leer más →</a>
+                    </div>
+
+                    <!-- Tarjeta Servicio 2: Publicidad (Ads) -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-primary/10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="mouse-pointer-click" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Google & Meta Ads</h3>
+                        <p class="text-gray-600 mb-5">
+                            Creamos campañas de publicidad pagada (PPC) optimizadas 
+                            para un máximo retorno de la inversión (ROI).
+                        </p>
+                        <a href="#" class="font-semibold text-primary hover:text-primary-hover">Leer más →</a>
+                    </div>
+
+                    <!-- Tarjeta Servicio 3: Redes Sociales -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-primary/10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="thumbs-up" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Gestión de Redes</h3>
+                        <p class="text-gray-600 mb-5">
+                            Construimos y gestionamos comunidades activas en redes 
+                            sociales que reflejan la voz de tu marca.
+                        </p>
+                        <a href="#" class="font-semibold text-primary hover:text-primary-hover">Leer más →</a>
+                    </div>
+
+                    <!-- Tarjeta Servicio 4: Diseño Web -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="400">
+                        <div class="bg-primary/10 text-primary w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="layout-template" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Diseño Web</h3>
+                        <p class="text-gray-600 mb-5">
+                            Diseñamos sitios web modernos, rápidos y centrados 
+                            en la conversión y la experiencia de usuario (UX).
+                        </p>
+                        <a href="#" class="font-semibold text-primary hover:text-primary-hover">Leer más →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Sobre Nosotros ===== -->
+        <section id="nosotros" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <!-- Imagen -->
+                    <div data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=600&q=80" 
+                        alt="Equipo de la agencia de marketing"
+                        class="rounded-xl shadow-xl w-full h-auto object-cover">
+                    </div>
+                    <!-- Texto -->
+                    <div class="max-w-lg" data-aos="fade-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                            Más que una Agencia, Somos 
+                            <span class="text-primary">tu Socio Estratégico</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Nacimos de la pasión por el marketing y la tecnología. 
+                            Creemos en las relaciones a largo plazo, basadas en la 
+                            transparencia, los datos y los resultados medibles.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-8">
+                            Nuestro equipo no solo ejecuta campañas; nos sumergimos 
+                            en tu negocio para entender tus retos y convertirlos 
+                            en oportunidades de crecimiento.
+                        </p>
+                        <a href="#contacto" class="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-hover transition-colors shadow-lg">
+                            Conoce al Equipo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== Sección Casos de Éxito (Portafolio) ===== -->
+        <section id="casos-exito" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Nuestros Casos de Éxito
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Los resultados hablan por sí mismos. Mira cómo hemos ayudado 
+                        a empresas como la tuya a tener éxito.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tarjeta Caso de Éxito 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" 
+                             alt="Caso de éxito 1"
+                             class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">E-commerce de Moda</h3>
+                            <p class="text-gray-600 mb-4">
+                                +200% de aumento en ventas orgánicas en 6 meses 
+                                a través de estrategia SEO y Ads combinada.
+                            </p>
+                            <a href="#" class="font-semibold text-primary hover:text-primary-hover">Ver Caso de Éxito →</a>
+                        </div>
+                    </div>
+                    <!-- Tarjeta Caso de Éxito 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" 
+                             alt="Caso de éxito 2"
+                             class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Software B2B</h3>
+                            <p class="text-gray-600 mb-4">
+                                Reducción del 40% en Coste por Lead (CPL) optimizando 
+                                campañas en Google Ads y LinkedIn.
+                            </p>
+                            <a href="#" class="font-semibold text-primary hover:text-primary-hover">Ver Caso de Éxito →</a>
+                        </div>
+                    </div>
+                    <!-- Tarjeta Caso de Éxito 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" 
+                             alt="Caso de éxito 3"
+                             class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Clínica Dental</h3>
+                            <p class="text-gray-600 mb-4">
+                                Crecimiento del 80% en reservas online mediante 
+                                SEO Local y gestión de redes sociales.
+                            </p>
+                            <a href="#" class="font-semibold text-primary hover:text-primary-hover">Ver Caso de Éxito →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Testimonios ===== -->
+        <section id="testimonios" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Lo que dicen nuestros clientes
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        La confianza es nuestro mayor activo.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Testimonio 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="quote" class="w-10 h-10 text-primary/40 mb-4"></i>
+                        <p class="text-lg text-gray-700 italic mb-6">
+                            "Trabajar con Agencia[Logo] ha sido un antes y un después. 
+                            Su equipo es profesional, proactivo y los resultados 
+                            superaron nuestras expectativas."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/100x100/d1d5db/333?text=CEO" alt="Foto de cliente" class="w-14 h-14 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-gray-900">Ana García</p>
+                                <p class="text-gray-500">CEO, E-commerce de Moda</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                        <i data-lucide="quote" class="w-10 h-10 text-primary/40 mb-4"></i>
+                        <p class="text-lg text-gray-700 italic mb-6">
+                            "Entienden perfectamente el sector B2B. Nos han ayudado 
+                            a optimizar nuestro embudo de ventas y a conseguir leads 
+                            mucho más cualificados."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/100x100/d1d5db/333?text=Dir." alt="Foto de cliente" class="w-14 h-14 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-gray-900">Carlos Fernández</p>
+                                <p class="text-gray-500">Director de Marketing, Software B2B</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Blog ===== -->
+        <section id="blog" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        Desde Nuestro Blog
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Mantente al día con las últimas tendencias, consejos y 
+                        noticias del mundo del marketing digital.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Tarjeta Blog 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" 
+                             alt="Artículo sobre SEO"
+                             class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-primary mb-2 block">SEO</span>
+                            <h3 class="text-xl font-bold mb-3">10 Claves del SEO en 2025</h3>
+                            <p class="text-gray-600 mb-5 text-sm">
+                                El SEO evoluciona. Descubre las tendencias que dominarán 
+                                las búsquedas el próximo año.
+                            </p>
+                            <a href="#" class="font-semibold text-primary hover:text-primary-hover">Leer Artículo →</a>
+                        </div>
+                    </div>
+                    <!-- Tarjeta Blog 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80" 
+                             alt="Artículo sobre IA y Ads"
+                             class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-primary mb-2 block">Publicidad</span>
+                            <h3 class="text-xl font-bold mb-3">IA en Google Ads: ¿Amigo o Enemigo?</h3>
+                            <p class="text-gray-600 mb-5 text-sm">
+                                Analizamos cómo la Inteligencia Artificial está 
+                                cambiando el panorama de la publicidad PPC.
+                            </p>
+                            <a href="#" class="font-semibold text-primary hover:text-primary-hover">Leer Artículo →</a>
+                        </div>
+                    </div>
+                    <!-- Tarjeta Blog 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" 
+                             alt="Artículo sobre Contenido"
+                             class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm font-semibold text-primary mb-2 block">Contenido</span>
+                            <h3 class="text-xl font-bold mb-3">El Poder del Video Marketing Corto</h3>
+                            <p class="text-gray-600 mb-5 text-sm">
+                                Por qué Reels y TikToks no son solo una moda, 
+                                sino una necesidad estratégica para tu marca.
+                            </p>
+                            <a href="#" class="font-semibold text-primary hover:text-primary-hover">Leer Artículo →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Contacto ===== -->
+        <section id="contacto" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <!-- Formulario -->
+                    <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-xl" data-aos="fade-right">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Hablemos de tu Proyecto</h2>
+                        <form action="#" method="POST" class="space-y-6">
+                            <div>
+                                <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" required
+                                       class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="email" name="email" required
+                                       class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono (Opcional)</label>
+                                <input type="tel" id="telefono" name="telefono"
+                                       class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="mensaje" class="block text-sm font-medium text-gray-700">¿Cómo podemos ayudarte?</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" required
+                                          class="mt-1 block w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit"
+                                        class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-primary-hover transition-colors shadow-lg">
+                                    Enviar Mensaje
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Información de Contacto -->
+                    <div class="max-w-lg" data-aos="fade-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                            Ponte en contacto 
+                            <span class="text-primary">directamente</span>
+                        </h2>
+                        <p class="text-lg text-gray-600 mb-8">
+                            ¿Prefieres una llamada o un email? Estamos aquí para 
+                            escucharte. Agenda una auditoría gratuita de 30 minutos 
+                            con uno de nuestros especialistas.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="mail" class="w-6 h-6 text-primary mt-1"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold">Email</h4>
+                                    <p class="text-gray-600 text-lg">hola@agencia.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="phone" class="w-6 h-6 text-primary mt-1"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold">Teléfono</h4>
+                                    <p class="text-gray-600 text-lg">+123 456 7890</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-primary mt-1"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold">Oficina</h4>
+                                    <p class="text-gray-600 text-lg">Av. Siempre Viva 123, Ciudad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-900 text-gray-300 py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Col 1: Logo y Redes -->
+                <div>
+                    <a href="#inicio" class="text-2xl font-bold text-white mb-4 block">
+                        Agencia[Logo]
+                    </a>
+                    <p class="text-gray-400 mb-6 max-w-xs">
+                        Estrategias de marketing digital que generan crecimiento real.
+                    </p>
+                    <div class="flex space-x-5">
+                        <a href="#" aria-label="LinkedIn" class="hover:text-white transition-colors">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="hover:text-white transition-colors">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Servicios -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-5 uppercase tracking-wider">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white transition-colors">Posicionamiento SEO</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Google & Meta Ads</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Gestión de Redes Sociales</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Diseño Web</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Marketing de Contenidos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Navegación -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-5 uppercase tracking-wider">Navegación</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#nosotros" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#casos-exito" class="hover:text-white transition-colors">Casos de Éxito</a></li>
+                        <li><a href="#blog" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#contacto" class="hover:text-white transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contacto Rápido -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-5 uppercase tracking-wider">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 flex-shrink-0"></i>
+                            <span>hola@agencia.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 flex-shrink-0"></i>
+                            <span>+123 456 7890</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 flex-shrink-0"></i>
+                            <span>Av. Siempre Viva 123, Ciudad</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-16 pt-8 text-center">
+                <p class="text-gray-400">
+                    © <span id="current-year"></span> Agencia[Logo]. Todos los derechos reservados.
+                </p>
+                <p class="text-gray-500 text-sm mt-2">
+                    <a href="#" class="hover:text-white">Política de Privacidad</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="hover:text-white">Términos de Uso</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts de JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 800, // Duración de la animación en ms
+            once: true, // Si la animación debe ocurrir solo una vez
+        });
+
+        // Renderizar iconos de Lucide
+        lucide.createIcons();
+
+        // Lógica del Menú Móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-btn');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        // Abrir menú
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        // Cerrar menú con botón X
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Cerrar menú al hacer clic en un enlace (para SPAs)
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+
+        // Año actual en el footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
